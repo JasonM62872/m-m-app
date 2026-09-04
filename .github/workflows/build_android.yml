@@ -22,11 +22,10 @@ jobs:
       - name: Deploy Google Android SDK
         uses: android-actions/setup-android@v3
 
-      # 🌟 NEW: Installs missing Linux system audio libraries so your engine packages don't panic!
       - name: Install System Audio Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libsndfile1 libasound2-dev
+          sudo apt-get install -y libsndfile1 libasound2-dev xvfb
 
       - name: Install build systems
         run: |
@@ -34,6 +33,8 @@ jobs:
           pip install flet flet-cli
           pip install -r requirements.txt
 
+      # 🌟 FIXED: Runs the compilation tool inside an isolated visual virtual buffer (xvfb)
+      # This tricks modules like Pygame into thinking they are attached to a real mobile phone canvas!
       - name: Execute Android APK compilation task
         run: |
-          flet build apk
+          xvfb-run --server-args="-screen 0 1024x768x24" flet build apk
