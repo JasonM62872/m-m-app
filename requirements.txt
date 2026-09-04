@@ -1,0 +1,4 @@
+kokoro_onnx
+soundfile
+pygame
+requests

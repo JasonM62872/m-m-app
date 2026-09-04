@@ -1,0 +1,19 @@
+[app]
+# 🏷️ The name displayed on the user's phone desktop icon
+title = "Voice Control Dashboard"
+
+# 🛠️ The unique identifier required by Google Play (No spaces, reverse domain format)
+# Change "jason" or "mycompany" to your personal developer handle
+package_name = "com.jason.voiceinterfacedashboard"
+
+# 🔢 Version controls for app store distribution updates
+version = "1.0.0"
+build_number = 1
+
+# 📱 Mobile display window orientations
+[android]
+orientation = "portrait"
+permissions = ["RECORD_AUDIO", "INTERNET"]
+
+# 🌟 FORCE BUNDLE OVERRIDES: Tells the tool to skip downloading and use your local files!
+sdk_path = "C:/Users/jason/AppData/Local/Android/Sdk"
