@@ -1,7 +1,5 @@
 name: Compile Mobile Package
-on:
-  push:
-  workflow_dispatch:
+on: [push]
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
@@ -40,11 +38,10 @@ jobs:
 
       - name: Execute Android APK compilation task
         run: |
-          yes | xvfb-run --server-args="-screen 0 1024x768x24" flet build apk src --module-name main_app
+          yes | xvfb-run --server-args="-screen 0 1024x768x24" flet build apk
 
-      # 🌟 ADD THIS STEP BACK TO THE VERY BOTTOM:
       - name: Upload compiled binary artifact
         uses: actions/upload-artifact@v4
         with:
           name: voice-control-dashboard-apk
-          path: src/build/apk/*.apk
+          path: build/apk/*.apk
