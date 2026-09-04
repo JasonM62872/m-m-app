@@ -38,7 +38,7 @@ jobs:
           pip install flet flet-cli
           pip install -r requirements.txt
 
-      # 🌟 FIXED: Commands the compiler to look directly at your "src" folder for the main script app!
       - name: Execute Android APK compilation task
         run: |
-          yes | xvfb-run --server-args="-screen 0 1024x768x24" flet build apk --module-name main_app src/
+          yes | xvfb-run --server-args="-screen 0 1024x768x24" flet build apk src --module-name main_app
+
