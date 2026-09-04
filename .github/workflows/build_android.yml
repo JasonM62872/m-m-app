@@ -1,9 +1,9 @@
 name: Compile Mobile Package
 on: [push]
 
-# 🌟 THE OVERRIDE SWITCH: Forces the GitHub server to allow the tools to compile anyway!
+# 🌟 FIXED: Swapped out the old unsecure node flag for the new native Node 24 activation key!
 env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'true'
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   build:
@@ -12,13 +12,13 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      # Upgraded Python environment action configuration profile
+      # Python environment action configuration profile
       - name: Setup Python environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # Upgraded Java setup action script interface configuration
+      # Java setup action script interface configuration
       - name: Setup Java framework
         uses: actions/setup-java@v5
         with:
