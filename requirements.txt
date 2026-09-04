@@ -2,4 +2,4 @@ kokoro_onnx
 soundfile
 pygame
 requests
-SpeechRecognition
+speech_recognition
