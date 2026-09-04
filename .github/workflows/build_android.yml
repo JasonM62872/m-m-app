@@ -47,4 +47,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: voice-control-dashboard-apk
-          path: build/apk/*.apk
+          path: src/build/apk/*.apk
