@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice_interface_dashboard"
+version = "1.0.0"
+description = "A self-contained offline voice interface ecosystem"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flet",
+    "kokoro_onnx",
+    "soundfile",
+    "pygame",
+    "requests"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

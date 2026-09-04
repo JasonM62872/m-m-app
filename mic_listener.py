@@ -9,7 +9,7 @@ except ImportError:
     pass
 
 import speech_recognition as sr
-import npc_brain
+from src import npc_brain
 
 
 def listen_to_player():

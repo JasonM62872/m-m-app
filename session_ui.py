@@ -2,7 +2,7 @@ import sqlite3
 import threading  # NEW: Fixes the freezing block so the text line updates instantly
 import flet as ft
 import mic_listener
-import npc_brain
+from src import npc_brain
 
 
 def main(page: ft.Page):

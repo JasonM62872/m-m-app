@@ -1,6 +1,5 @@
 import os
 import sys        # 🌟 Added to scan platform deployment properties
-import time
 import flet as ft
 import mic_listener
 import npc_brain

@@ -45,7 +45,7 @@ def generate_offline_voice_response(npc_name, reply_text, chosen_voice_archetype
 
         # 2. Alternates file target names dynamically to bypass the OS file lock
         if voice_file_track_toggle:
-            filename = "output_1.wav"
+            filename = "../output_1.wav"
         else:
             filename = "output_2.wav"
         voice_file_track_toggle = not voice_file_track_toggle
