@@ -1,6 +1,5 @@
 flet
 kokoro_onnx
 soundfile
-pygame
 requests
 SpeechRecognition
