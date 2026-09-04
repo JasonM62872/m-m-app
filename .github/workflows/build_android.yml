@@ -22,18 +22,18 @@ jobs:
       - name: Deploy Google Android SDK
         uses: android-actions/setup-android@v3
 
+      # 🌟 NEW: Installs missing Linux system audio libraries so your engine packages don't panic!
+      - name: Install System Audio Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsndfile1 libasound2-dev
+
       - name: Install build systems
         run: |
           python -m pip install --upgrade pip
-          pip install flet-cli
+          pip install flet flet-cli
           pip install -r requirements.txt
 
       - name: Execute Android APK compilation task
         run: |
           flet build apk
-
-      - name: Upload compiled binary artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: voice-control-dashboard-apk
-          path: build/apk/*.apk
