@@ -1,5 +1,4 @@
 flet
 kokoro_onnx
-soundfile
 requests
-SpeechRecognition
+
