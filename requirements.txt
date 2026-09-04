@@ -3,4 +3,3 @@ soundfile
 pygame
 requests
 SpeechRecognition
-pyaudio

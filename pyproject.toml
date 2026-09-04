@@ -13,7 +13,8 @@ dependencies = [
     "kokoro_onnx",
     "soundfile",
     "pygame",
-    "requests"
+    "requests",
+    "SpeechRecognition"
 ]
 
 [tool.setuptools.packages.find]
