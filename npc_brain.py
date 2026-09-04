@@ -279,7 +279,7 @@ def get_npc_response_with_memory(session_id, user_text, npc_name, voice_key=None
         )
         # =========================================================================
 
-        # Hand the finalized text response back to main_app.py to update the UI
+        # Hand the finalized text response back to main.py to update the UI
         return npc_reply_text
 
     except Exception as e:

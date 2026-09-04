@@ -184,7 +184,7 @@ def main(page: ft.Page):
     def clear_history_clicked(e):
         """Safely wipes all past dialogue context logs completely offline without needing global variables."""
         try:
-            # 1. Dynamically find the folder this specific main_app.py file is running from
+            # 1. Dynamically find the folder this specific main.py file is running from
             import os, sqlite3
             BASE_DIR = os.path.dirname(os.path.abspath(__file__))
             db_path = os.path.join(BASE_DIR, "dnd_campaign.db")

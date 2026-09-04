@@ -9,7 +9,7 @@ package_name = "com.jason.voiceinterfacedashboard"
 # 🔢 Version controls for app store distribution updates
 version = "1.0.0"
 build_number = 1
-path = "main_app.py"
+path = "main.py"
 
 # 📱 Mobile display window orientations
 [android]
