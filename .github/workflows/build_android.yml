@@ -38,5 +38,4 @@ jobs:
 
       - name: Execute Android APK compilation task
         run: |
-          yes | xvfb-run --server-args="-screen 0 1024x768x24" flet build apk --module-name src.main_app
-      
+          yes | xvfb-run --server-args="-screen 0 1024x768x24" flet build apk src/main_app.py
