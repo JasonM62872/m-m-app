@@ -1,7 +1,7 @@
 name: Compile Mobile Package
 on:
   push:
-  workflow_dispatch:  # 🌟 NEW: This permanently activates the manual "Run workflow" button on GitHub!
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
@@ -42,3 +42,9 @@ jobs:
         run: |
           yes | xvfb-run --server-args="-screen 0 1024x768x24" flet build apk src --module-name main_app
 
+      # 🌟 ADD THIS STEP BACK TO THE VERY BOTTOM:
+      - name: Upload compiled binary artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: voice-control-dashboard-apk
+          path: build/apk/*.apk
