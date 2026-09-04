@@ -1,4 +1,3 @@
 flet
-kokoro_onnx
 requests
 
